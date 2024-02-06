@@ -17,6 +17,9 @@
             <label for="inputEmail" class="form-label">E-mail</label>
             <input type="e-mail" class="form-control" name='emailContato' id="inputEmail">
         </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
     </form>
 </div>
 @endsection
