@@ -26,4 +26,47 @@ class ContatoController extends Controller
 
    }
 
+   public function exibirGerenciador(request $request){
+
+    
+        $dados = Contato::query();
+
+        $dados->when($request->nomeContato,function($query,$nome){
+            $query->where('nomeContato','like','%'.$nome.'%');
+        });
+
+        $dados = $dados->get();
+
+        return view('buscarTodos',['contatos'=>$dados]);
+
+    }
+
+   public function delete(Contato $id){
+
+    $id->delete();
+
+    return Redirect::route('todos-contato');
+
+   }
+
+   public function update(Contato $id, Request $request){
+
+    $contato = $request->validate(['nomeContato' => 'string|required',
+    'foneContato' => 'string|required',
+    'emailContato' => 'string|required']);
+
+    $id->fill($contato);
+    $id->save();
+    return Redirect::route('todos-contato');
+   }
+
+   public function show(Contato $id){
+
+    return view('buscarTodos',['contatos'=>$id]);
+    
+   }
+
+
+
+
 }

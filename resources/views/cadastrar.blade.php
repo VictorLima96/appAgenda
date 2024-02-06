@@ -1,7 +1,8 @@
 @extends('padrao')
 @section('content')
 <div class="container">
-    <form class="row g-3">
+    <form class="row g-3" method="Post" action="{{route('cadastrar-contato')}}">
+       @csrf 
         <div class="col-md-8">
             <label for="inputNome" class="form-label">Nome</label>
             <input type="text" class="form-control" name= 'nomeContato' id="inputNome">
