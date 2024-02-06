@@ -66,7 +66,4 @@ class ContatoController extends Controller
     
    }
 
-
-
-
 }
