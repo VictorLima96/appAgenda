@@ -7,5 +7,6 @@ Route::get('/',[ContatoController::class, 'index'])->name('index');
 Route::get('/cadastrar',[ContatoController::class, 'exibirFormContato'])->name('formulario-contato');
 Route::post('/cadastrar',[ContatoController::class, 'createContato'])->name('cadastrar-contato');
 Route::get('/todosContato',[ContatoController::class, 'exibirGerenciador'])->name('todos-contato');
-Route::delete('/todosContato/{id}',[ContatoController::class, 'delete'])->name('todos-contato');
-Route::put('/todosContato/{id}',[ContatoController::class, 'update'])->name('alterar-contato');
+Route::delete('/delete-contato/{id}',[ContatoController::class, 'destroy'])->name('delete-contato');
+Route::get('/alterar/{id}',[ContatoController::class, 'show'])->name('alterar-contato');
+Route::put('/alterarBanco/{id}',[ContatoController::class, 'update'])->name('alterarBanco-contato');

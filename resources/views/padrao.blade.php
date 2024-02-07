@@ -27,7 +27,10 @@
           <a class="nav-link" href="/cadastrar">Cadastro</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/todoscontato">Buscar</a>
+          <a class="nav-link" href="/todosContato">Buscar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/alterar">Alterar</a>
         </li>
       </ul>
     </div>

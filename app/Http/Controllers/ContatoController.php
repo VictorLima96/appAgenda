@@ -41,7 +41,7 @@ class ContatoController extends Controller
 
     }
 
-   public function delete(Contato $id){
+   public function destroy(Contato $id){
 
     $id->delete();
 
@@ -62,7 +62,7 @@ class ContatoController extends Controller
 
    public function show(Contato $id){
 
-    return view('buscarTodos',['contatos'=>$id]);
+    return view('alterar',['contatos'=>$id]);
     
    }
 
